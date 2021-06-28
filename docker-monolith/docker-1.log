@@ -1,0 +1,10 @@
+lultala@home:~/studies/lultala_microservices$ docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
+ubuntu-bash/ubuntu-tmp-file   latest    4731ec44f57e   9 seconds ago   63.1MB
+nginx                         latest    4f380adfc10f   2 days ago      133MB
+ubuntu                        18.04     7d0d8fa37224   7 days ago      63.1MB
+docker/getting-started        latest    3ba8f2ff0727   3 months ago    27.9MB
+hello-world                   latest    d1165f221234   3 months ago    13.3kB
+D Различия:
+Образ представляет из себя файловую систему с параметрами используемыми при запуске. Он не имеет состояния и никогда не меняется.
+А контейнер является запущенным экземпляром образа
