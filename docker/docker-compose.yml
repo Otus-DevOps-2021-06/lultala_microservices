@@ -82,7 +82,7 @@ services:
       - reddit_front
       - reddit_back
 
-        volumes:
+volumes:
   post_db:
   prometheus_data:
 
