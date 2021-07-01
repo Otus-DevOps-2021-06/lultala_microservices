@@ -39,7 +39,7 @@ services:
       - '--storage.tsdb.retention=1d' # Задаем время хранения метрик в 1 день
     networks: 
       - reddit_front
-    
+
   mongodb-exporter:
     user: root
     image: bitnami/mongodb-exporter:latest
@@ -50,7 +50,7 @@ services:
     command:
       - '--mongodb.uri=post_db:27017'
       - '--web.listen-address=:9111'
-        
+
   blackbox-exporter:
     user: root
     image: prom/blackbox-exporter:latest
@@ -74,7 +74,7 @@ services:
       - reddit_front      
 
   alertmanager:
-    image: ${USER_NAME}/alertmanager
+    image: ${USERNAME}/alertmanager
     command:
       - '--config.file=/etc/alertmanager/config.yml'
     ports:
@@ -85,8 +85,7 @@ services:
 volumes:
   prometheus_data:
   grafana_data:
-   
+
 networks:
   reddit_front:
   reddit_back:
-    
