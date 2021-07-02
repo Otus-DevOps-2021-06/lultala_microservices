@@ -7,7 +7,12 @@ services:
     volumes:
       - post_db:/data/db
     networks:
-      - reddit_back
+      reddit_back:
+        aliases: 
+          - post_db
+          - comment_db
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 
   ui:
     #build: ./ui
@@ -17,6 +22,13 @@ services:
       - ${UI_PORT}:9292/tcp
     networks:
       - reddit_front
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 
   post:
     #build: ./post-py
@@ -25,6 +37,19 @@ services:
     networks:
       - reddit_back
       - reddit_front
+    environment:
+      - POST_DATABASE_HOST=post_db
+      - POST_DATABASE=posts
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    depends_on:
+      - post_db
+    ports:
+      - "5000:5000"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
 
   comment:
     #build: ./comment
@@ -33,6 +58,8 @@ services:
     networks:
       - reddit_back
       - reddit_front
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 
 volumes:
   post_db:
