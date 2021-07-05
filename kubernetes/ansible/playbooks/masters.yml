@@ -1,0 +1,5 @@
+- name: install on master node
+  hosts: masters
+  become: true
+  roles:
+    - master

@@ -1,0 +1,6 @@
+---
+# tasks file for master
+
+- include: docker.yml
+- include: install_k8s.yml
+- include: initial_master.yml
