@@ -1,0 +1,3 @@
+---
+- include: init_kuber.yml
+- include: add_network.yml

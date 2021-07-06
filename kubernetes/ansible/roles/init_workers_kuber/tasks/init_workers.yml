@@ -1,0 +1,11 @@
+---
+- name: Copy txt
+  copy:
+    src: ../files/cluster_initialized.txt
+    dest: ./cluster_initialized.txt
+
+- name: swapoff -a
+  shell: swapoff -a
+
+- name: Init worker
+  shell: bash cluster_initialized.txt

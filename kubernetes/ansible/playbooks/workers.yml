@@ -1,0 +1,5 @@
+- name: install slave nodes
+  hosts: workers
+  become: true
+  roles:
+    - workers  

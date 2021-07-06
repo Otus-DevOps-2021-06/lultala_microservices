@@ -1,0 +1,15 @@
+- name: kuber_masters
+  hosts: masters
+  become: true
+
+  roles:
+    - install_kuber
+    - init_master_kuber
+
+- name: kuber_workers
+  hosts: workers
+  become: true
+
+  roles:
+    - install_kuber
+    - init_workers_kuber
