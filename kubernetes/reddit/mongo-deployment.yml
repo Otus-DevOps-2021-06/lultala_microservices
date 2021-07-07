@@ -33,3 +33,6 @@ spec:
       - name: mongo-persistent-storage
         persistentVolumeClaim:
           claimName: mongo-pvc
+
+# try test for hard works
+# name: mongo-gce-pd-storage
