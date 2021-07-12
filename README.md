@@ -47,3 +47,5 @@ docker run -d --rm --network=reddit --env POST_SERVICE_HOST=posts_1 --env COMMEN
 Настроил визуализацию в Kibana.</br>
 Настроил парсинг плохо структурированных логов.</br>
 Поднял распределенный трейсинг с помощью Zipkin</p>
+
+<h2>k8s- 4</h2>
