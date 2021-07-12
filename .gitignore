@@ -1,2 +1,15 @@
-
 docker/.env
+key.json
+variables.json
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+build_info.txt
+.env
+## python specific
+*.pyc
+bugged-code-master/
+minikube-linux-amd64
+tls.*

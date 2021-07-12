@@ -49,3 +49,7 @@ docker run -d --rm --network=reddit --env POST_SERVICE_HOST=posts_1 --env COMMEN
 Поднял распределенный трейсинг с помощью Zipkin</p>
 
 <h2>k8s- 4</h2>
+<p>Установил Helm и Tiller</br>
+Создал использую helm charts для reddit app.</br>
+Подправил настройки дл работы с helm 2.</br>
+Сайт открывается все работает</p>

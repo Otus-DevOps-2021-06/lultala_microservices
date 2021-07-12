@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"cluster","Source":"./modules/cluster","Dir":"modules/cluster"},{"Key":"node","Source":"./modules/nodes","Dir":"modules/nodes"}]}
+{"Modules":[{"Key":"cluster","Source":"./modules/cluster","Dir":"modules/cluster"},{"Key":"node","Source":"./modules/nodes","Dir":"modules/nodes"},{"Key":"","Source":"","Dir":"."}]}
